@@ -1,12 +1,12 @@
 #include <stdio.h>
 
-/* uses the puts function*/
+/* main- uses the puts function
+ * Return: 0
+ */
 
 int main(void)
 
-{	
-	char cow[] = "\"Programming is like building a multilingual puzzle";
-	puts(cow); 
-
+{
+	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }

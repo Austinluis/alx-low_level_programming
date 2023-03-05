@@ -1,10 +1,8 @@
 #include <stdlib.h>
 #include <time.h>
 #include <stdio.h>
-/* more headers goes there */
 
-/* main - stores a digit in varable n every time code is executed 
- * and prints if n is negative or positive
+/* main - pints if n is positive, negative or zero
  * Return: 0
  */
 int main(void)
@@ -17,23 +15,19 @@ int main(void)
 	/* your code goes there */
 	if((n > 0))
 	{
-		printf("%d is positive\n", n);
+		printf ("%d is positive\n", n);
 	}
 	else
 	{
 		if((n = 0))
 		{
-			printf("%d is zero\n", n);
+			printf ("%d is zero\n", n);
 		}
 		else
 		{
 			if((n < 0))
 			{
-				printf("%d is negative\n", n);
-			}
-			else
-			{
-				printf("failed\n");
+				printf ("%d is negative\n", n);
 			}
 		}
 	}

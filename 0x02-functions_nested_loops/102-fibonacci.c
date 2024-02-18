@@ -10,7 +10,7 @@ int main(void)
 	unsigned long int i = 2, a = 1, b = 2, c;
 
 	printf("%lu, %lu", a, b);
-	while (i <= 50)
+	while (i < 50)
 	{
 		c = a + b;
 		a = b;

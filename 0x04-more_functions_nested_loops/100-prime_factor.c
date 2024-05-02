@@ -23,10 +23,10 @@ int main(void)
 			i /= k;
 		}
 	}
-	
+
 	if (i > 1)
 		j = i;
-	
+
 	printf("%ld\n", j);
 	return (0);
 }

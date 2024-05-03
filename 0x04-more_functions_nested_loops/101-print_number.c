@@ -8,10 +8,10 @@
 
 void print_number(int n)
 {
-	int rev = 0;
+	int rev = 0, i = n;
 
 	/* if n is 0 */
-	if (n == 0)
+	if (n < 10)
 		_putchar(n + '0');
 
 	/* converts n to a positive number if it is negative */
@@ -34,4 +34,7 @@ void print_number(int n)
 		_putchar(rev % 10 + '0');
 		rev /= 10;
 	}
+
+	if (i % 10 == 0 && i != 0)
+		_putchar('0');
 }

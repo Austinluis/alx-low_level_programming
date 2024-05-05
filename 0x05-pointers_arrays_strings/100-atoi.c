@@ -24,7 +24,8 @@ int _strlen(char *s)
 
 int _atoi(char *s)
 {
-	int i, n = 1, j = 0, len = _strlen(s);
+	int i, n = 1, len = _strlen(s);
+	unsigned int j = 0;
 
 	for (i = 0; i < len; i++)
 	{

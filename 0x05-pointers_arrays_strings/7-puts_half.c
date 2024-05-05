@@ -11,6 +11,7 @@ int _strlen(char *s);
 void puts_half(char *str)
 {
 	int i, len, n;
+
 	len	= _strlen(str);
 	n = (len - 1) / 2;
 
@@ -21,7 +22,7 @@ void puts_half(char *str)
 }
 
 /**
- * strlen - function to return the lenght of a string
+ * _strlen - function to return the lenght of a string
  * @s: pointer to the string
  * Return: lenght of string
  */

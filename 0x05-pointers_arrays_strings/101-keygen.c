@@ -15,8 +15,8 @@ int checksum(int *arr, int len);
 
 int main(void)
 {
-	int seed, rem, target, current, len, sum, arr[100];
-	int randm, excess, recess, div;
+	int seed, rem, target, current, len, sum, passwd[100];
+	int randm, excess, recess, div, i, j, k, l, m;
 
 	seed = time(0);
 	srand(seed);
@@ -29,17 +29,12 @@ int main(void)
 	while (rem > 0)
 	{
 		randm = rand() % (ASCII_MAX - ASCII_MIN + 1) + ASCII_MIN;
-		arr[len] = randm;
+		passwd[len] = randm;
 		len++;
 		current += randm;
 		rem = target - current;
 	}
 
-	int passwd[len];
-
-	/* stores only the random developed ascii from arr in passwd */
-	for (int i = 0; i < len; i++)
-		passwd[i] = arr[i];
 
 	sum = checksum(passwd, len);
 
@@ -50,7 +45,7 @@ int main(void)
 		{
 			excess = sum - target;
 
-			for (int j = 0; j < len; j++)
+			for (j = 0; j < len; j++)
 			{
 				if (passwd[j] - excess >= 33)
 				{
@@ -60,7 +55,7 @@ int main(void)
 				else if (j == len - 1)
 				{
 					div = excess / len;
-					for (int i = 0; i < len; i++)
+					for (i = 0; i < len; i++)
 					{
 						if (passwd[i] - div >= 33)
 							passwd[i] -= div;
@@ -72,20 +67,20 @@ int main(void)
 		{
 			recess = target - sum;
 
-			for (int j = 0; j < len; j++)
+			for (k = 0; k < len; k++)
 			{
-				if (passwd[j] + recess <= 127)
+				if (passwd[k] + recess <= 127)
 				{
-					passwd[j] += recess;
+					passwd[k] += recess;
 					break;
 				}
-				else if (j == len - 1)
+				else if (k == len - 1)
 				{
 					div = recess / len;
-					for (int i = 0; i < len; i++)
+					for (l = 0; l < len; l++)
 					{
-						if (passwd[i] + div <= 127)
-							passwd[i] += div;
+						if (passwd[l] + div <= 127)
+							passwd[l] += div;
 					}
 				}
 			}
@@ -93,8 +88,8 @@ int main(void)
 		sum = checksum(passwd, len);
 	}
 
-	for (int i = 0; i < len; i++)
-		printf("%c", passwd[i]);
+	for (m = 0; m < len; m++)
+		printf("%c", passwd[m]);
 
 	return (0);
 }
@@ -108,9 +103,9 @@ int main(void)
 
 int checksum(int *arr, int len)
 {
-	int sum = 0;
+	int sum = 0, i;
 
-	for (int i = 0; i < len; i++)
+	for (i = 0; i < len; i++)
 		sum += arr[i];
 
 	return (sum);

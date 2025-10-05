@@ -38,10 +38,8 @@ int punct(char c)
 		case '"': case '(': case ')': case '{': case '}':
 		case ' ': case '\t': case '\n':
 			return (1);
-			break;
 		default:
 			return (0);
-			break;
 	}
 }
 

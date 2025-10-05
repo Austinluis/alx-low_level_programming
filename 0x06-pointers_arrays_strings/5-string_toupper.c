@@ -19,7 +19,7 @@ char _toupper(char c)
 		pos++;
 	}
 
-	return (char)(65 + pos);
+	return ((char)(65 + pos));
 }
 
 

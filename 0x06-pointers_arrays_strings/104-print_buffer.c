@@ -16,6 +16,9 @@ void print_buffer(char *b, int size)
 	start = 0;
 	end = ((size % 10) > 0) ? size / 10 : (size / 10) - 1;
 
+	if (size <= 0)
+		printf("\n");
+
 	for (i = 0; i <= end; i++)
 	{
 		limit = ((i + 1) * 10 <= size) ? (i + 1) * 10 : size;

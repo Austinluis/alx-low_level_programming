@@ -30,10 +30,10 @@ int is_palindrome_helper(int start, int end, char *s)
 {
 	if (start >= end)
 		return (1);
-	
+
 	if (s[start] != s[end])
 		return (0);
-	
+
 	return (is_palindrome_helper(start + 1, end - 1, s));
 }
 

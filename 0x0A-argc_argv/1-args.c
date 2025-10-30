@@ -13,6 +13,6 @@ int main(int argc, char *argv[])
 	/* Avoid unused warnings for argv */
 	(void)argv;
 
-	printf("%d\n", argc);
+	printf("%d\n", argc - 1);
 	return (0);
 }

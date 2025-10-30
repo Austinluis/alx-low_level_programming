@@ -14,6 +14,6 @@ int main(int argc, char *argv[])
 	/* Avoid unused warnings for argv */
 	(void)argv;
 
-	printf("%d\n", argc - 1);
+	printf("%d\n", argc);
 	exit(EXIT_SUCCESS);
 }

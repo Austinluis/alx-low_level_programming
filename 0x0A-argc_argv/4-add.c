@@ -85,16 +85,21 @@ int _atoi(char *s)
 int main(int argc, char *argv[])
 {
 	int res = 0, n = 1;
+	char *j;
 
 	while (argc > n)
 	{
-		if (_isdigit((int)**(argv + n)))
-			res += _atoi(*(argv + n));
-		else
+		j = argv[n];
+		while (*j != '\0')
 		{
-			printf("Error\n");
-			return (1);
+			if (!_isdigit((int)*j))
+			{
+				printf("Error\n");
+				return (1);
+			}
+			j++;
 		}
+		res += _atoi(*(argv + n));
 		n++;
 	}
 
